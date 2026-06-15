@@ -58,7 +58,7 @@ def build_container_file(distro):
         packages="", 
         copy_kernel="""RUN cp /boot/vmlinuz-* "$(find /usr/lib/modules -maxdepth 1 -type d | tail -n 1)/vmlinuz""", 
         pacman_overlays="", 
-        clean_apt="apt clean -y", 
+        clean_apt="RUN apt clean -y", 
         remove_usretc="",
         distro_name="debian")
     elif distro == "ubuntu":
