@@ -1,4 +1,4 @@
-# ilsm - assembler.py
+# ilsm - assemble.py
 # Licensed under the Apache 2.0 License
 
 # Part of code responsible of building custom linux bootc images
