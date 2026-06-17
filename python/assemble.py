@@ -5,7 +5,7 @@
 
 # Fedora is experimentally supported, but it is not fully tested yet, so it may not work as expected. It is recommended to use other distros for now.
 
-
+import os
 
 CONTAINER_FILE_TEMPLATE = """
 
@@ -48,6 +48,14 @@ def tests():
     build_container_file("fedora")
     build_container_file("arch")
     build_container_file("opensuse")
+
+
+def assemble_image(distro):
+    # Create tmp dir for building the image
+    os.makedirs("/tmp/ilsm/assemble", exist_ok=True)
+
+    build_container_file(distro)
+
 def build_container_file(distro):
     CONTAINERFILE = CONTAINER_FILE_TEMPLATE
 
