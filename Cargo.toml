@@ -1,0 +1,12 @@
+[package]
+name = "ilsm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+indicatif = "0.18.4"
+
+
+[[bin]]
+name = "ilsm"
+path = "rust/src/main.rs"
